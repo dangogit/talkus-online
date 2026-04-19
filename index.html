@@ -120,16 +120,19 @@
     /* Floating WhatsApp */
     .float-wa {
       position: fixed;
-      right: 24px;
-      bottom: 24px;
+      right: 16px;
+      bottom: 16px;
       background: #25D366;
       color: white;
-      width: 60px; height: 60px;
+      width: 56px; height: 56px;
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
       transition: transform 0.2s ease;
       z-index: 50;
+    }
+    @media (min-width: 640px) {
+      .float-wa { right: 24px; bottom: 24px; width: 60px; height: 60px; }
     }
     .float-wa::before {
       content: '';
@@ -155,49 +158,49 @@
 <body>
 
   <!-- NAV -->
-  <nav class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between relative z-10">
-    <a href="#" class="font-bold text-lg flex items-center gap-2" style="color: var(--primary);">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <nav class="max-w-6xl mx-auto px-5 sm:px-6 py-5 sm:py-6 flex items-center justify-between relative z-10">
+    <a href="#" class="font-bold text-base sm:text-lg flex items-center gap-2" style="color: var(--primary);">
+      <svg width="22" height="22" class="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
       </svg>
       talkus.online
     </a>
-    <a href="https://wa.me/639663965098" class="hidden sm:inline-block text-sm font-medium text-slate-600 hover:text-slate-900">Contact</a>
+    <a href="https://wa.me/639663965098" class="text-sm font-medium text-slate-600 hover:text-slate-900">Contact</a>
   </nav>
 
   <!-- HERO -->
-  <section class="max-w-6xl mx-auto px-6 pt-10 pb-16">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
+  <section class="max-w-6xl mx-auto px-5 sm:px-6 pt-6 pb-12 md:pt-10 md:pb-16">
+    <div class="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
       <!-- Photo -->
       <div class="order-1 md:order-1 relative flex justify-center">
-        <div class="relative w-full max-w-sm">
+        <div class="relative w-full max-w-[260px] sm:max-w-xs md:max-w-sm">
           <div class="blob"></div>
           <div class="photo-wrap aspect-square rounded-full overflow-hidden shadow-xl ring-4 ring-white">
             <img src="assets/jovie.jpg" alt="Jovie Vecinal" class="w-full h-full object-cover" />
           </div>
           <!-- Floating chat bubble accent -->
-          <div class="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-2 z-10 border" style="border-color: var(--border);">
+          <div class="absolute -bottom-3 -right-2 sm:-bottom-4 sm:-right-4 bg-white rounded-2xl shadow-lg px-3 py-2 sm:px-4 sm:py-3 flex items-center gap-2 z-10 border" style="border-color: var(--border);">
             <div class="pulse-dot"></div>
-            <span class="text-sm font-semibold text-slate-700">Available now</span>
+            <span class="text-xs sm:text-sm font-semibold text-slate-700">Available now</span>
           </div>
         </div>
       </div>
 
       <!-- Text -->
-      <div class="order-2 md:order-2 relative">
-        <div class="inline-flex items-center gap-2 text-sm text-slate-600 mb-6 px-3 py-1.5 rounded-full bg-white border shadow-sm" style="border-color: var(--border);">
+      <div class="order-2 md:order-2 relative text-center md:text-left">
+        <div class="inline-flex items-center gap-2 text-xs sm:text-sm text-slate-600 mb-5 md:mb-6 px-3 py-1.5 rounded-full bg-white border shadow-sm" style="border-color: var(--border);">
           <span>🇵🇭</span><span>Remote from the Philippines</span>
         </div>
-        <h1 class="text-5xl md:text-6xl font-extrabold leading-[1.1] mb-6">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.1] mb-5 md:mb-6">
           Hi, I'm <span style="color: var(--primary);">Jovie</span>.
         </h1>
-        <p class="text-xl text-slate-600 mb-3 leading-relaxed">
+        <p class="text-lg sm:text-xl text-slate-600 mb-2 md:mb-3 leading-relaxed">
           I help businesses keep their customers happy.
         </p>
-        <p class="handwritten text-2xl mb-8" style="color: var(--accent);">
+        <p class="handwritten text-xl sm:text-2xl mb-7 md:mb-8" style="color: var(--accent);">
           One friendly reply at a time.
         </p>
-        <div class="flex flex-wrap gap-3">
+        <div class="flex flex-wrap gap-3 justify-center md:justify-start">
           <a href="https://wa.me/639663965098"
              class="btn-primary inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -214,30 +217,30 @@
   </section>
 
   <!-- TRUST STRIP -->
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="grid grid-cols-3 gap-6 bg-white rounded-2xl border p-6 shadow-sm" style="border-color: var(--border);">
+  <section class="max-w-5xl mx-auto px-5 sm:px-6 py-8 md:py-10">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 bg-white rounded-2xl border p-5 sm:p-6 shadow-sm" style="border-color: var(--border);">
       <div class="text-center">
-        <div class="text-2xl md:text-3xl font-extrabold" style="color: var(--primary);">Multi-channel</div>
+        <div class="text-xl sm:text-2xl md:text-3xl font-extrabold" style="color: var(--primary);">Multi-channel</div>
         <div class="text-xs md:text-sm text-slate-500 mt-1">Email · Chat · Phone · Tickets</div>
       </div>
-      <div class="text-center border-x" style="border-color: var(--border);">
-        <div class="text-2xl md:text-3xl font-extrabold" style="color: var(--primary);">Fluent English</div>
+      <div class="text-center sm:border-x border-t border-b sm:border-t-0 sm:border-b-0 py-4 sm:py-0" style="border-color: var(--border);">
+        <div class="text-xl sm:text-2xl md:text-3xl font-extrabold" style="color: var(--primary);">Fluent English</div>
         <div class="text-xs md:text-sm text-slate-500 mt-1">Clear, warm communication</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl md:text-3xl font-extrabold" style="color: var(--primary);">Flexible hours</div>
+        <div class="text-xl sm:text-2xl md:text-3xl font-extrabold" style="color: var(--primary);">Flexible hours</div>
         <div class="text-xs md:text-sm text-slate-500 mt-1">Timezone coverage built in</div>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="max-w-3xl mx-auto px-6 py-20">
-    <div class="text-center mb-10">
-      <div class="inline-block text-sm font-semibold uppercase tracking-widest mb-3" style="color: var(--accent);">About me</div>
-      <h2 class="text-3xl md:text-4xl font-bold">A little about who you're hiring</h2>
+  <section id="about" class="max-w-3xl mx-auto px-5 sm:px-6 py-14 md:py-20">
+    <div class="text-center mb-8 md:mb-10">
+      <div class="inline-block text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3" style="color: var(--accent);">About me</div>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold">A little about who you're hiring</h2>
     </div>
-    <div class="space-y-7 text-lg text-slate-700 leading-[1.8]">
+    <div class="space-y-6 md:space-y-7 text-base sm:text-lg text-slate-700 leading-[1.75] md:leading-[1.8]">
       <p>
         For the past few years, I've been the person on the other end of customer emails, live chats, phone calls, and support tickets. What started as just a job turned into something I genuinely care about. There's nothing better than turning a frustrated customer into a happy one.
       </p>
@@ -254,14 +257,14 @@
   </section>
 
   <!-- HOW I CAN HELP -->
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <div class="text-center mb-14">
-      <div class="inline-block text-sm font-semibold uppercase tracking-widest mb-3" style="color: var(--accent);">What I do</div>
-      <h2 class="text-3xl md:text-4xl font-bold mb-3">How I can help</h2>
-      <p class="text-slate-600">Here's what I do, day in and day out.</p>
+  <section class="max-w-6xl mx-auto px-5 sm:px-6 py-14 md:py-20">
+    <div class="text-center mb-10 md:mb-14">
+      <div class="inline-block text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3" style="color: var(--accent);">What I do</div>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">How I can help</h2>
+      <p class="text-sm sm:text-base text-slate-600">Here's what I do, day in and day out.</p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
       <div class="card rounded-2xl p-6">
         <div class="icon-box w-12 h-12 rounded-xl flex items-center justify-center mb-4">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -306,24 +309,26 @@
   </section>
 
   <!-- QUOTE -->
-  <section class="max-w-3xl mx-auto px-6 py-16">
+  <section class="max-w-3xl mx-auto px-5 sm:px-6 py-12 md:py-16">
     <div class="text-center">
-      <svg class="mx-auto mb-6 opacity-20" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style="color: var(--primary);">
+      <svg class="mx-auto mb-5 md:mb-6 opacity-20" width="36" height="36" viewBox="0 0 24 24" fill="currentColor" style="color: var(--primary);">
         <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c.25 0 .25.25.25 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/>
       </svg>
-      <blockquote class="text-2xl md:text-3xl font-medium text-slate-700 leading-[1.5]">
+      <blockquote class="text-xl sm:text-2xl md:text-3xl font-medium text-slate-700 leading-[1.5]">
         Good customer service isn't about scripts. It's about <span style="color: var(--primary); font-weight: 600;">actually listening</span>, and responding like a real person.
       </blockquote>
-      <div class="mt-8 handwritten text-2xl" style="color: var(--accent);">Jovie</div>
+      <div class="mt-6 md:mt-8 handwritten text-2xl" style="color: var(--accent);">Jovie</div>
     </div>
   </section>
 
   <!-- TOOLS -->
-  <section class="max-w-4xl mx-auto px-6 py-20 text-center">
-    <div class="inline-block text-sm font-semibold uppercase tracking-widest mb-3" style="color: var(--accent);">Tools & platforms</div>
-    <h2 class="text-3xl md:text-4xl font-bold mb-3">Tools I work with</h2>
-    <p class="text-slate-600 mb-10">I'm comfortable with every major platform, and happy to learn yours.</p>
-    <div class="flex flex-wrap justify-center gap-2.5">
+  <!-- anchor kept in next section -->
+
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 py-14 md:py-20 text-center">
+    <div class="inline-block text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3" style="color: var(--accent);">Tools & platforms</div>
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Tools I work with</h2>
+    <p class="text-sm sm:text-base text-slate-600 mb-8 md:mb-10 max-w-md mx-auto">I'm comfortable with every major platform, and happy to learn yours.</p>
+    <div class="flex flex-wrap justify-center gap-2 sm:gap-2.5">
       <span class="pill px-4 py-2 rounded-full text-sm font-medium">Zendesk</span>
       <span class="pill px-4 py-2 rounded-full text-sm font-medium">Intercom</span>
       <span class="pill px-4 py-2 rounded-full text-sm font-medium">Freshdesk</span>
@@ -338,15 +343,15 @@
   </section>
 
   <!-- CTA -->
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <div class="relative rounded-3xl p-12 md:p-16 text-center overflow-hidden" style="background: linear-gradient(135deg, #0F766E 0%, #0B5E58 100%); color: white;">
+  <section class="max-w-6xl mx-auto px-5 sm:px-6 py-14 md:py-20">
+    <div class="relative rounded-2xl sm:rounded-3xl p-8 sm:p-12 md:p-16 text-center overflow-hidden" style="background: linear-gradient(135deg, #0F766E 0%, #0B5E58 100%); color: white;">
       <!-- Decorative blobs -->
       <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-20" style="background: radial-gradient(circle, #FB923C 0%, transparent 70%);"></div>
       <div class="absolute -bottom-20 -left-20 w-64 h-64 rounded-full opacity-20" style="background: radial-gradient(circle, #5EEAD4 0%, transparent 70%);"></div>
 
       <div class="relative">
-        <h2 class="text-3xl md:text-5xl font-bold mb-5">Let's talk.</h2>
-        <p class="text-lg md:text-xl opacity-90 mb-10 max-w-xl mx-auto leading-relaxed">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-5">Let's talk.</h2>
+        <p class="text-base sm:text-lg md:text-xl opacity-90 mb-8 md:mb-10 max-w-xl mx-auto leading-relaxed">
           If your business could use a hand with customers, send me a message. I'll get back to you quickly.
         </p>
         <a href="https://wa.me/639663965098"
